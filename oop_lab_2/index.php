@@ -4,12 +4,9 @@ require_once('Product.php');
 require_once('Book.php');
 require_once('BabyCar.php');
 
-$books = [
+$products =  [
     $book1 = new Book(),
     $book2 = new Book(),
-];
-
-$babyCars = [
     $babyCar1 = new BabyCar(),
     $babyCar2 = new BabyCar(),
 ];
@@ -65,7 +62,7 @@ $babyCar2->getFinalPrice();
 <body>
     <div class="container mt-5">
         <div class="row">
-            <?php foreach (array_merge($books, $babyCars) as $product) : ?>
+            <?php foreach ($products as $product) : ?>
                 <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="<?= $product->image ?>" alt="<?= $product->name ?>" width="286" height="286">
